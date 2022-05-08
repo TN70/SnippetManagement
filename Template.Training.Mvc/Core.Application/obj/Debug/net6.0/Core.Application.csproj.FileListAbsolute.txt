@@ -1,0 +1,12 @@
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\bin\Debug\net6.0\Core.Application.deps.json
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\bin\Debug\net6.0\Core.Application.dll
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\bin\Debug\net6.0\Core.Application.pdb
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\obj\Debug\net6.0\Core.Application.csproj.AssemblyReference.cache
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\obj\Debug\net6.0\Core.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\obj\Debug\net6.0\Core.Application.AssemblyInfoInputs.cache
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\obj\Debug\net6.0\Core.Application.AssemblyInfo.cs
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\obj\Debug\net6.0\Core.Application.csproj.CoreCompileInputs.cache
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\obj\Debug\net6.0\Core.Application.dll
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\obj\Debug\net6.0\refint\Core.Application.dll
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\obj\Debug\net6.0\Core.Application.pdb
+D:\Documents\My Project\Template.Training\Template.Training.Mvc\Core.Application\obj\Debug\net6.0\ref\Core.Application.dll
