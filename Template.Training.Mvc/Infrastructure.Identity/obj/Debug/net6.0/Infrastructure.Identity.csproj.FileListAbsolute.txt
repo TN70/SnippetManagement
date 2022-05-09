@@ -10,3 +10,15 @@ D:\Documents\My Project\Template.Training\Template.Training.Mvc\Infrastructure.I
 D:\Documents\My Project\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\refint\Infrastructure.Identity.dll
 D:\Documents\My Project\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\Infrastructure.Identity.pdb
 D:\Documents\My Project\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\ref\Infrastructure.Identity.dll
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\bin\Debug\net6.0\Infrastructure.Identity.deps.json
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\bin\Debug\net6.0\Infrastructure.Identity.dll
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\bin\Debug\net6.0\Infrastructure.Identity.pdb
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\Infrastructure.Identity.csproj.AssemblyReference.cache
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\Infrastructure.Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\Infrastructure.Identity.AssemblyInfoInputs.cache
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\Infrastructure.Identity.AssemblyInfo.cs
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\Infrastructure.Identity.csproj.CoreCompileInputs.cache
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\Infrastructure.Identity.dll
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\refint\Infrastructure.Identity.dll
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\Infrastructure.Identity.pdb
+C:\Users\nqtrong\OneDrive - CMC Global\Documents\.NET\Template.Training\Template.Training.Mvc\Infrastructure.Identity\obj\Debug\net6.0\ref\Infrastructure.Identity.dll

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\My Project\\Template.Training\\Template.Training.Mvc\\Infrastructure.Identity\\Infrastructure.Identity.csproj": {}
+    "C:\\Users\\nqtrong\\OneDrive - CMC Global\\Documents\\.NET\\Template.Training\\Template.Training.Mvc\\Infrastructure.Identity\\Infrastructure.Identity.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\My Project\\Template.Training\\Template.Training.Mvc\\Infrastructure.Identity\\Infrastructure.Identity.csproj": {
+    "C:\\Users\\nqtrong\\OneDrive - CMC Global\\Documents\\.NET\\Template.Training\\Template.Training.Mvc\\Infrastructure.Identity\\Infrastructure.Identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\My Project\\Template.Training\\Template.Training.Mvc\\Infrastructure.Identity\\Infrastructure.Identity.csproj",
+        "projectUniqueName": "C:\\Users\\nqtrong\\OneDrive - CMC Global\\Documents\\.NET\\Template.Training\\Template.Training.Mvc\\Infrastructure.Identity\\Infrastructure.Identity.csproj",
         "projectName": "Infrastructure.Identity",
-        "projectPath": "D:\\Documents\\My Project\\Template.Training\\Template.Training.Mvc\\Infrastructure.Identity\\Infrastructure.Identity.csproj",
-        "packagesPath": "C:\\Users\\Trong Nguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\My Project\\Template.Training\\Template.Training.Mvc\\Infrastructure.Identity\\obj\\",
+        "projectPath": "C:\\Users\\nqtrong\\OneDrive - CMC Global\\Documents\\.NET\\Template.Training\\Template.Training.Mvc\\Infrastructure.Identity\\Infrastructure.Identity.csproj",
+        "packagesPath": "C:\\Users\\nqtrong\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nqtrong\\OneDrive - CMC Global\\Documents\\.NET\\Template.Training\\Template.Training.Mvc\\Infrastructure.Identity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Trong Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nqtrong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
