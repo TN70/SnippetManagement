@@ -1,5 +1,12 @@
-﻿using MediatR;
+﻿using Core.Application.Features.Snippet.Commands.CreateSnippet;
+using Core.Application.Features.Snippet.Commands.DeleteSnippet;
+using Core.Application.Features.Snippet.Commands.UpdateSnippet;
+using Core.Application.Features.Snippet.Queries.GetAllSnippets;
+using Core.Application.Features.Snippet.Queries.GetSnippetById;
+using Core.Application.Wrappers;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Template.Training.Mvc.Extensions;
 
 namespace Template.Training.Mvc.APIs.v1
 {
@@ -7,10 +14,12 @@ namespace Template.Training.Mvc.APIs.v1
     public class SnippetController : BaseApiController
     {
         private readonly IMediator _mediator;
+        private readonly ILogger<SnippetController> _logger;
 
-        public SnippetController(IMediator mediator)
+        public SnippetController(IMediator mediator, ILogger<SnippetController> logger)
         {
             _mediator = mediator;
+            _logger = logger;
         }
 
         /// <summary>
@@ -18,15 +27,17 @@ namespace Template.Training.Mvc.APIs.v1
         /// </summary>
         /// <returns></returns>
         [HttpGet("GetAllSnippets")]
-        public async Task<IActionResult> GetAllSnippets()
+        public async Task<IActionResult> GetAllSnippets([FromQuery] GetAllSnippetsQuery query, CancellationToken cancellationToken)
         {
             try
             {
-                return Ok("All Snippets");
+                var response = await _mediator.Send(query, cancellationToken);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                _logger.LogError(ex.Message, ex);
+                return StatusCode(StatusCodeCustom.BadRequest, new Response<Exception>(ex.Message));
             }
         }
 
@@ -35,15 +46,17 @@ namespace Template.Training.Mvc.APIs.v1
         /// </summary>
         /// <returns></returns>
         [HttpGet("GetSnippetById")]
-        public async Task<IActionResult> GetSnippetById(string Id)
+        public async Task<IActionResult> GetSnippetById([FromQuery] GetSnippetByIdQuery query)
         {
             try
             {
-                return Ok("Snippet Id:"+Id);
+                var response = await _mediator.Send(query);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                _logger.LogError(ex.Message, ex);
+                return StatusCode(StatusCodeCustom.BadRequest, new Response<Exception>(ex.Message));
             }
         }
 
@@ -52,9 +65,18 @@ namespace Template.Training.Mvc.APIs.v1
         /// </summary>
         /// <returns></returns>
         [HttpPost("CreateSnippet")]
-        public async Task<IActionResult> CreateSnippet()
+        public async Task<IActionResult> CreateSnippet([FromBody] CreateSnippetCommand command, CancellationToken cancellationToken)
         {
-            return Ok("Create");
+            try
+            {
+                var response = await _mediator.Send(command, cancellationToken);
+                return StatusCode(response.StatusCode, response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, ex);
+                return StatusCode(StatusCodeCustom.BadRequest, new Response<Exception>(ex.Message));
+            }
         }
 
         /// <summary>
@@ -62,9 +84,18 @@ namespace Template.Training.Mvc.APIs.v1
         /// </summary>
         /// <returns></returns>
         [HttpPut("UpdateSnippet")]
-        public async Task<IActionResult> UpdateSnippet()
+        public async Task<IActionResult> UpdateSnippet([FromBody] UpdateSnippetCommand command, CancellationToken cancellationToken)
         {
-            return Ok("Update");
+            try
+            {
+                var response = await _mediator.Send(command, cancellationToken);
+                return StatusCode(response.StatusCode, response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, ex);
+                return StatusCode(StatusCodeCustom.BadRequest, new Response<Exception>(ex.Message));
+            }
         }
 
         /// <summary>
@@ -72,10 +103,18 @@ namespace Template.Training.Mvc.APIs.v1
         /// </summary>
         /// <returns></returns>
         [HttpDelete("DeleteSnippet")]
-        public async Task<IActionResult> DeleteSnippet()
+        public async Task<IActionResult> DeleteSnippet([FromQuery] DeleteSnippetCommand command, CancellationToken cancellationToken)
         {
-            return Ok("Delete");
+            try
+            {
+                var response = await _mediator.Send(command, cancellationToken);
+                return StatusCode(response.StatusCode, response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, ex);
+                return StatusCode(StatusCodeCustom.BadRequest, new Response<Exception>(ex.Message));
+            }
         }
-
     }
 }
