@@ -1,0 +1,10 @@
+# /**/.vscode
+/**/.vs
+/**/bin
+/**/obj
+/**/Properties/PublishProfiles/
+/**/*.csproj.user
+/**/node_modules
+/**/Logs
+/**/nlog
+
