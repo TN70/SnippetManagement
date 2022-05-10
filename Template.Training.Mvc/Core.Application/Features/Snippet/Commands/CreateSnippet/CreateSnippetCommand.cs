@@ -2,7 +2,6 @@
 using Core.Application.DTOs;
 using Core.Application.Interfaces.Repositories;
 using Core.Application.Wrappers;
-using Core.Domain.Entities;
 using MediatR;
 
 namespace Core.Application.Features.Snippet.Commands.CreateSnippet
@@ -44,7 +43,7 @@ namespace Core.Application.Features.Snippet.Commands.CreateSnippet
             {
                 foreach (var item in request.Tags)
                 {
-                    var tag = new Tag
+                    var tag = new Core.Domain.Entities.Tag
                     {
                         SnippetId = data.Id,
                         Name = item,
@@ -58,7 +57,7 @@ namespace Core.Application.Features.Snippet.Commands.CreateSnippet
             {
                 foreach (var item in request.Links)
                 {
-                    var link = new Link
+                    var link = new Core.Domain.Entities.Link
                     {
                         Value = item,
                         SnippetId = data.Id

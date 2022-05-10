@@ -19,6 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Link\Queries\GetLinkById\" />
+    <Folder Include="Features\Tag\Queries\GetTagById\" />
     <Folder Include="Features\User\" />
   </ItemGroup>
 
