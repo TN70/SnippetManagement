@@ -1,10 +1,7 @@
-﻿using Core.Domain.Entities;
+﻿using Core.Application.Helpers;
+using Core.Domain.Common;
+using Core.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Context
 {
@@ -16,6 +13,24 @@ namespace Infrastructure.Persistence.Context
         }
 
         public DbSet<Snippet> Snippets { get; set; }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+        {
+            foreach (var entry in ChangeTracker.Entries<BaseEntity>())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entry.Entity.CreateAt = DateTime.Now;
+                        entry.Entity.Status = Status.CREATED;
+                        break;
+                    case EntityState.Modified:
+                        entry.Entity.LastModified = DateTime.Now;
+                        break;
+                }
+            }
+            return base.SaveChangesAsync(cancellationToken);
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
