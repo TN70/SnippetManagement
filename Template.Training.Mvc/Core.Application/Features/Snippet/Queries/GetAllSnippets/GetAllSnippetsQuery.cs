@@ -13,10 +13,10 @@ namespace Core.Application.Features.Snippet.Queries.GetAllSnippets
     }
     public class GetAllSnippetsHandler : IRequestHandler<GetAllSnippetsQuery, PagedResponse<List<SnippetViewModel>>>
     {
-        private readonly ISnippetRespositoryAsync _snippetRepository;
+        private readonly ISnippetRepositoryAsync _snippetRepository;
         private readonly IMapper _mapper;
 
-        public GetAllSnippetsHandler(ISnippetRespositoryAsync snippetRepository, IMapper mapper)
+        public GetAllSnippetsHandler(ISnippetRepositoryAsync snippetRepository, IMapper mapper)
         {
             _snippetRepository = snippetRepository;
             _mapper = mapper;

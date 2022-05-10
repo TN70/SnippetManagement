@@ -3,6 +3,7 @@ using Core.Application.Features.Snippet.Commands.DeleteSnippet;
 using Core.Application.Features.Snippet.Commands.UpdateSnippet;
 using Core.Application.Features.Snippet.Queries.GetAllSnippets;
 using Core.Application.Features.Snippet.Queries.GetSnippetById;
+using Core.Application.Features.Snippet.Queries.SearchSnippetByKeyword;
 using Core.Application.Wrappers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -22,10 +23,6 @@ namespace Template.Training.Mvc.APIs.v1
             _logger = logger;
         }
 
-        /// <summary>
-        /// Get All Snippets
-        /// </summary>
-        /// <returns></returns>
         [HttpGet("GetAllSnippets")]
         public async Task<IActionResult> GetAllSnippets([FromQuery] GetAllSnippetsQuery query, CancellationToken cancellationToken)
         {
@@ -41,10 +38,21 @@ namespace Template.Training.Mvc.APIs.v1
             }
         }
 
-        /// <summary>
-        /// Get Snippet by Id
-        /// </summary>
-        /// <returns></returns>
+        [HttpGet("SearchSnippetByKeyword")]
+        public async Task<IActionResult> SearchSnippetByKeyword([FromQuery] SearchSnippetByKeywordQuery query, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var response = await _mediator.Send(query, cancellationToken);
+                return StatusCode(response.StatusCode, response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, ex);
+                return StatusCode(StatusCodeCustom.BadRequest, new Response<Exception>(ex.Message));
+            }
+        }
+
         [HttpGet("GetSnippetById")]
         public async Task<IActionResult> GetSnippetById([FromQuery] GetSnippetByIdQuery query)
         {
@@ -60,10 +68,6 @@ namespace Template.Training.Mvc.APIs.v1
             }
         }
 
-        /// <summary>
-        /// Create Snippet
-        /// </summary>
-        /// <returns></returns>
         [HttpPost("CreateSnippet")]
         public async Task<IActionResult> CreateSnippet([FromBody] CreateSnippetCommand command, CancellationToken cancellationToken)
         {
@@ -79,10 +83,6 @@ namespace Template.Training.Mvc.APIs.v1
             }
         }
 
-        /// <summary>
-        /// Update Snippet
-        /// </summary>
-        /// <returns></returns>
         [HttpPut("UpdateSnippet")]
         public async Task<IActionResult> UpdateSnippet([FromBody] UpdateSnippetCommand command, CancellationToken cancellationToken)
         {
@@ -98,10 +98,6 @@ namespace Template.Training.Mvc.APIs.v1
             }
         }
 
-        /// <summary>
-        /// Delete Snippet
-        /// </summary>
-        /// <returns></returns>
         [HttpDelete("DeleteSnippet")]
         public async Task<IActionResult> DeleteSnippet([FromQuery] DeleteSnippetCommand command, CancellationToken cancellationToken)
         {

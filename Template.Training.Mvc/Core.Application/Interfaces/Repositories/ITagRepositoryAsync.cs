@@ -2,7 +2,7 @@
 
 namespace Core.Application.Interfaces.Repositories
 {
-    public interface ISnippetRespositoryAsync : IGenericRepositoryAsync<Snippet>
+    public interface ITagRepositoryAsync : IGenericRepositoryAsync<Tag>
     {
     }
 }

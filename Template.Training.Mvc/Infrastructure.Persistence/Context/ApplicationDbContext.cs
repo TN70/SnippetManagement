@@ -13,6 +13,8 @@ namespace Infrastructure.Persistence.Context
         }
 
         public DbSet<Snippet> Snippets { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Link> Links { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
@@ -39,7 +41,10 @@ namespace Infrastructure.Persistence.Context
             //Property Configurations
             modelBuilder.Entity<Snippet>()
                         .ToTable("Snippet");
-
+            modelBuilder.Entity<Tag>()
+                        .ToTable("Tag");
+            modelBuilder.Entity<Link>()
+                        .ToTable("Link");
         }
     }
 }
