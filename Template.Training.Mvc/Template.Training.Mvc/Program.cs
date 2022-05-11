@@ -1,6 +1,6 @@
 using Core.Application;
 using Infrastructure.Persistence;
-using Template.Training.Mvc.Extensions;
+using SnippetManagement.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Template.Training.Mvc.APIs.v1
+namespace SnippetManagement.APIs.v1
 {
     [ApiController]
     [Route("api/v{version:apiVersion}/[controller]")]

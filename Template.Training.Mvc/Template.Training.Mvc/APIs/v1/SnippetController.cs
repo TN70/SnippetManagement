@@ -7,9 +7,9 @@ using Core.Application.Features.Snippet.Queries.SearchSnippetByKeyword;
 using Core.Application.Wrappers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Template.Training.Mvc.Extensions;
+using SnippetManagement.Extensions;
 
-namespace Template.Training.Mvc.APIs.v1
+namespace SnippetManagement.APIs.v1
 {
     [ApiVersion("1.0")]
     public class SnippetController : BaseApiController
