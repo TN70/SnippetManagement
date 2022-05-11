@@ -13,10 +13,10 @@ namespace Core.Application.Features.Snippet.Queries.GetSnippetById
     }
     public class GetSnippetByIdHandler : IRequestHandler<GetSnippetByIdQuery, Response<SnippetViewModel>>
     {
-        private readonly ISnippetRespositoryAsync _snippetRepository;
+        private readonly ISnippetRepositoryAsync _snippetRepository;
         private readonly IMapper _mapper;
 
-        public GetSnippetByIdHandler(ISnippetRespositoryAsync snippetRepository, IMapper mapper)
+        public GetSnippetByIdHandler(ISnippetRepositoryAsync snippetRepository, IMapper mapper)
         {
             _snippetRepository = snippetRepository;
             _mapper = mapper;

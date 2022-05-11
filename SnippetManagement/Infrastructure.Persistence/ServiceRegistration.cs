@@ -29,7 +29,9 @@ namespace Infrastructure.Persistence
 
             #region Repositories
             services.AddTransient(typeof(IGenericRepositoryAsync<>), typeof(GenericRepositoryAsync<>));
-            services.AddTransient<ISnippetRespositoryAsync, SnippetRepositoryAsync>();
+            services.AddTransient<ISnippetRepositoryAsync, SnippetRepositoryAsync>();
+            services.AddTransient<ITagRepositoryAsync, TagRepositoryAsync>();
+            services.AddTransient<ILinkRepositoryAsync, LinkRepositoryAsync>();
             #endregion
         }
     }

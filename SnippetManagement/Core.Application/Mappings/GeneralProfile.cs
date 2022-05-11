@@ -11,8 +11,11 @@ namespace Core.Application.Mappings
         public GeneralProfile()
         {
             CreateMap<Snippet, SnippetViewModel>();
-            CreateMap<CreateSnippetCommand, Snippet>();
+            CreateMap<CreateSnippetCommand, Snippet>().ForMember(x => x.Tags, otp => otp.Ignore()).ForMember(x => x.Links, otp => otp.Ignore());
             CreateMap<UpdateSnippetCommand, Snippet>();
+            CreateMap<Tag, TagViewModel>();
+            CreateMap<Link, LinkViewModel>();
+
         }
     }
 }

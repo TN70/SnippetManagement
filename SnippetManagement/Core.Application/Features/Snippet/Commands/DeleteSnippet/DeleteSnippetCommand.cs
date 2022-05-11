@@ -11,12 +11,12 @@ namespace Core.Application.Features.Snippet.Commands.DeleteSnippet
     {
         public int Id { get; set; }
     }
-    public class UpdateSnippetHandler : IRequestHandler<DeleteSnippetCommand, Response<SnippetViewModel>>
+    public class DeleteSnippetHandler : IRequestHandler<DeleteSnippetCommand, Response<SnippetViewModel>>
     {
-        private readonly ISnippetRespositoryAsync _snippetRespository;
+        private readonly ISnippetRepositoryAsync _snippetRespository;
         private readonly IMapper _mapper;
 
-        public UpdateSnippetHandler(ISnippetRespositoryAsync snippetRespository, IMapper mapper)
+        public DeleteSnippetHandler(ISnippetRepositoryAsync snippetRespository, IMapper mapper)
         {
             _snippetRespository = snippetRespository;
             _mapper = mapper;
