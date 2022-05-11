@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetManagement", "Template.Training.Mvc\SnippetManagement.csproj", "{71AAB48A-1ABD-445E-9005-AF63F5E5B7C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetManagement", "SnippetManagement\SnippetManagement.csproj", "{71AAB48A-1ABD-445E-9005-AF63F5E5B7C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C03AD4A1-7C3E-461E-90EE-31C0FFE9AEE0}"
 EndProject
