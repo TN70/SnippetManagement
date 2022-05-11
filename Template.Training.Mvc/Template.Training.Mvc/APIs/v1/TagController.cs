@@ -4,9 +4,9 @@ using Core.Application.Features.Tag.Commands.UpdateTag;
 using Core.Application.Wrappers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Template.Training.Mvc.Extensions;
+using SnippetManagement.Extensions;
 
-namespace Template.Training.Mvc.APIs.v1
+namespace SnippetManagement.APIs.v1
 {
     [ApiVersion("1.0")]
     public class TagController : BaseApiController
