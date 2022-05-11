@@ -1,4 +1,4 @@
-﻿namespace Template.Training.Mvc.Extensions
+﻿namespace SnippetManagement.Extensions
 {
     public static class StatusCodeCustom
     {
