@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
 
-namespace Template.Training.Mvc.Extensions
+namespace SnippetManagement.Extensions
 {
     public static class ServiceExtensions
     {
